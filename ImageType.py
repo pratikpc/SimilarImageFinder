@@ -12,9 +12,7 @@ class ImageType:
             self.Hash: str = DHashFromPath(path)
         else:
             self.Hash = Hash
-#        print(self.Path, self.Hash)
-        # By Default, No String is Yet to be searched
-        self.Searched: bool = bool(Searched)
+        # print(self.Path, self.Hash)
         # By Default, All Elements are Unique
         self.Unique: bool = bool(Unique)
 
@@ -29,7 +27,7 @@ class ImageType:
 
 
     def __iter__(self):
-        return iter([self.Path, self.Hash, self.Searched, self.Unique])
+        return iter([self.Path, self.Hash])
 
     def __hash__(self) -> int:
         # Convert Given String to hash
